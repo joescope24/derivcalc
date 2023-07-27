@@ -1,0 +1,123 @@
+/* Main Webpage Styling */
+@font-face {
+  font-family: mulishSemiBold;
+  src: local("static/Mulish/Mulish-SemiBold.ttf");
+}
+
+html {
+  font-family: mulishSemiBold
+}
+
+.container .btn:hover {
+  background-color: lightgray;
+  border-color: lightgray;
+}
+
+nav {
+  z-index: 10;
+}
+
+/* Landing Page Styling */
+
+img.backgroundimg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Opacity */
+  opacity: 0.75;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+  img.backgroundimg {
+    left: 50%;
+    margin-left: -512px;   /* 50% */
+  }
+}
+
+/* Landing Text Styling */
+p.landingtext {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 75px;
+  white-space: nowrap;
+}
+
+.wrapper {
+  height: 100vh;
+  /*This part is important for centering*/
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: white;
+  font-size: 75px;
+  white-space: nowrap;
+}
+
+.typing-demo {
+  width: 29ch;
+  animation: typing 2.5s steps(34), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+
+/* Landing Button Styling */
+.container .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: transparent;
+  color: white;
+  font-size: 50px;
+  padding: 12px 24px;
+  border: 5px solid white;
+  cursor: pointer;
+  border-radius: 10px;
+  opacity: 0;
+  animation: fade-in 1s ease-in forwards;
+  animation-delay: 2.5s; /* Add a 1-second delay before starting the animation */
+}
+
+  @keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Home Page Styling */
+
