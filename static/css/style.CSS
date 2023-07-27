@@ -1,3 +1,7 @@
+/* Notes
+Navbar Hex: #C9EAF8
+ */
+
 /* Main Webpage Styling */
 @font-face {
   font-family: mulishSemiBold;
@@ -72,7 +76,7 @@ p.landingtext {
 }
 
 .typing-demo {
-  width: 29ch;
+  width: 34ch;
   animation: typing 2.5s steps(34), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
@@ -120,4 +124,29 @@ p.landingtext {
 }
 
 /* Home Page Styling */
+.centerbg {
+  position: absolute;
+  top: 10%;
+  left: 45%;
+}
 
+.logo {
+  height: 125px;
+  width: 350px;
+}
+
+/* About Page Styling */
+.headshot {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+}
+
+p.abouttext {
+  font-size: 25px;
+
+}
+
+.aboutrows {
+  margin-left: 30px;
+}

@@ -11,5 +11,9 @@ def landingPage():
 def homePage():
     return render_template('homePage.html')
 
+@app.route('/about')
+def aboutPage():
+    return render_template('aboutPage.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
