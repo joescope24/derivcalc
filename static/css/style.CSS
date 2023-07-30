@@ -4,12 +4,13 @@ Navbar Hex: #C9EAF8
 
 /* Main Webpage Styling */
 @font-face {
-  font-family: mulishSemiBold;
-  src: local("static/Mulish/Mulish-SemiBold.ttf");
+  font-family: playfair;
+  src: local("static/Playfair_Display/static/PlayfairDisplay-Regular.ttf");
 }
 
-html {
-  font-family: mulishSemiBold
+html body {
+  font-family: playfair;
+  background-color: #FFF8EF;
 }
 
 .container .btn:hover {
@@ -19,6 +20,10 @@ html {
 
 nav {
   z-index: 10;
+}
+.nav-item {
+  font-size: 25px;
+  padding: 0px 20px 0px 20px
 }
 
 /* Landing Page Styling */
@@ -137,16 +142,42 @@ p.landingtext {
 
 /* About Page Styling */
 .headshot {
-  width: 500px;
-  height: 500px;
-  border-radius: 10px;
+  width: 750px;
+  height: 750px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 50px gray;
 }
 
 p.abouttext {
   font-size: 25px;
-
+  padding-top: 50px;
 }
 
 .aboutrows {
   margin-left: 30px;
 }
+
+.aboutheader {
+  font-size: 100px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+/* .parallelogram {
+	width: 550px;
+	height: 100px;
+	transform: skew(-20deg);
+	background: white;
+    font-size: 75px;
+    text-align: center;
+    box-shadow: 10px 10px 10px;
+} */

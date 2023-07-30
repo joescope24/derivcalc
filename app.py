@@ -11,7 +11,7 @@ basedir = os.path.abspath(os.path.dirname(__file__))
 
 # Path: app.py
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'ATB2.db')
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'dcdata.db')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'beyond_course_scope'
 db.init_app(app)
@@ -25,9 +25,11 @@ def landingPage():
 def homePage():
     return render_template('homePage.html')
 
+
 @app.route('/about')
 def aboutPage():
     return render_template('aboutPage.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
