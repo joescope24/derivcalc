@@ -3,10 +3,41 @@
 {% block page_title %}Home{% endblock %}
 
 {% block page_content %}
-
-<div class="centerbg">
-    <!-- <img src="static/images/dvcwebsite.png" alt="background image" class="backgroundimg"> -->
-    <img src="static/images/dvc-removebg.png" alt="background image" class="logo">
+<div class="row homeAlign fadeIn" style="padding: 150px 75px 0px 0px">
+    <div class="col-7" style="padding: 0px 30px 0px 100px">
+        <div class="row">
+        <h1 class="aboutheader">Enabling you to <i>instantly</i> price your securities.</h1>
+            <p class="hometext">DerivCalc helps you stay more aware of the true value of your positions
+            with just a few simple clicks.</p>
+        </div>
+        <div class="row">
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <p class="hometext">Sign In</p>
+                    </div>
+                    <div class="row">
+                        <label for="inputUsername" class="visually-hidden">Username</label>
+                        <input type="text" class="form-control homeInputFields" id="inputUsername" placeholder="Username">
+                        <label for="inputPassword" class="visually-hidden">Password</label>
+                        <input type="password" class="form-control homeInputFields" id="inputPassword" placeholder="Password">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <p class="hometext">New User</p>
+                    <button type="submit" class="form-control">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-5">
+        <img src="static/images/homePhoto.jpg" alt="background image" class="homePhoto">
+    </div>
 </div>
-
+<div class="homeSpacer"></div>
+<hr width="93%" style="margin:auto">
+<div class="homeSpacer"></div>
+<div class="row homeAlign">
+    <h2 style="text-align: center">Learn more about DerivCalc</h2>
+</div>
 {% endblock %}

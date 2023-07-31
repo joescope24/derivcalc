@@ -31,5 +31,10 @@ def aboutPage():
     return render_template('aboutPage.html')
 
 
+@app.route('/newCalculation')
+def newCalculation():
+    return render_template('newCalculation.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

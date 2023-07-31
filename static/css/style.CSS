@@ -2,50 +2,7 @@
 Navbar Hex: #C9EAF8
  */
 
-/* Main Webpage Styling */
-@font-face {
-  font-family: playfair;
-  src: local("static/Playfair_Display/static/PlayfairDisplay-Regular.ttf");
-}
-
-html body {
-  font-family: playfair;
-  background-color: #FFF8EF;
-}
-
-.container .btn:hover {
-  background-color: lightgray;
-  border-color: lightgray;
-}
-
-nav {
-  z-index: 10;
-}
-.nav-item {
-  font-size: 25px;
-  padding: 0px 20px 0px 20px
-}
-
-/* Landing Page Styling */
-
-img.backgroundimg {
-  /* Set rules to fill background */
-  min-height: 100%;
-  min-width: 1024px;
-
-  /* Set up proportionate scaling */
-  width: 100%;
-  height: auto;
-
-  /* Set up positioning */
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  /* Opacity */
-  opacity: 0.75;
-}
-
+/* Animations */
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
   img.backgroundimg {
     left: 50%;
@@ -100,6 +57,96 @@ p.landingtext {
   }
 }
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeRight {
+  animation: fadeInRight 0.25s ease-in-out;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-300px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeLeft {
+  animation: fadeInLeft 0.25s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.25s ease-in-out;
+}
+
+/* General Webpage Styling */
+@font-face {
+  font-family: webFont;
+  src: local("static/Titillium_Web/TitilliumWeb-Regular.ttf");
+}
+
+:root {
+  font-family: webFont;
+  background-color: #FFF8EF;
+}
+html body {
+  background-color: #FFF8EF;
+}
+
+.container .btn:hover {
+  background-color: lightgray;
+  border-color: lightgray;
+}
+
+nav {
+  z-index: 10;
+}
+.nav-item {
+  font-size: 25px;
+  padding: 0px 20px 0px 20px
+}
+
+
+
+/* Landing Page Styling */
+
+img.backgroundimg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  /* Opacity */
+  opacity: 0.75;
+}
+
 /* Landing Button Styling */
 .container .btn {
   position: absolute;
@@ -135,11 +182,35 @@ p.landingtext {
   left: 45%;
 }
 
-.logo {
-  height: 125px;
-  width: 350px;
+.homePhoto {
+  height: auto;
+  width: 1000px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 50px gray;
 }
 
+.homeAlign {
+  display: flex;
+  background-color: #FFF8EF;
+}
+
+.homeSpacer {
+  height: 100px
+}
+
+p.hometext {
+  font-size: 27px;
+  padding-top: 25px;
+}
+
+.form-control {
+  width: 20px;
+  height: 40px;
+}
+
+.homeSignIn {
+  justify-content: center;
+}
 /* About Page Styling */
 .headshot {
   width: 750px;
@@ -151,10 +222,6 @@ p.landingtext {
 p.abouttext {
   font-size: 25px;
   padding-top: 50px;
-}
-
-.aboutrows {
-  margin-left: 30px;
 }
 
 .aboutheader {
@@ -172,12 +239,21 @@ p.abouttext {
   transform: translateY(-50%);
 }
 
-/* .parallelogram {
-	width: 550px;
-	height: 100px;
-	transform: skew(-20deg);
-	background: white;
-    font-size: 75px;
-    text-align: center;
-    box-shadow: 10px 10px 10px;
-} */
+/* New Calculation Styling */
+
+.newCalcStart {
+  padding-top: 400px;
+}
+
+.inputDrop {
+  width: 500px;
+  height: 100px;
+  border-radius: 15px;
+  font-size: 35px;
+  color: darkgray;
+  border-width: 0px;
+}
+
+.securitySelect {
+  padding-left: 75px;
+}
