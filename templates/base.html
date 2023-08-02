@@ -30,6 +30,15 @@
                   <li><a class="dropdown-item" href="#">History</a></li>
                 </ul>
               </li>
+              {% if current_user.is_authenticated %}
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{ url_for('logout') }}">Log Out</a>
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">Log In</a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>
