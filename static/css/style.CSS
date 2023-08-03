@@ -121,11 +121,27 @@ nav {
   z-index: 10;
 }
 .nav-item {
-  font-size: 25px;
-  padding: 0px 20px 0px 20px
+  font-size: 22px;
+  padding: 0px 20px 0px 20px;
+  color: gray;
 }
 
+.centerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+}
 
+.inputButtons {
+  background-color: #FEE6C5;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.logoFlex {
+  width: 330px;
+}
 
 /* Landing Page Styling */
 
@@ -184,7 +200,7 @@ img.backgroundimg {
 
 .homePhoto {
   height: auto;
-  width: 1000px;
+  width: 950px;
   border-radius: 15px;
   box-shadow: 10px 10px 50px gray;
 }
@@ -192,24 +208,33 @@ img.backgroundimg {
 .homeAlign {
   display: flex;
   background-color: #FFF8EF;
+  padding: 50px 50px 0px 50px;
 }
 
 .homeSpacer {
-  height: 100px
+  height: 50px
 }
 
 p.hometext {
-  font-size: 27px;
+  font-size: 25px;
   padding-top: 25px;
-}
-
-.form-control {
-  width: 20px;
-  height: 40px;
 }
 
 .homeSignIn {
   justify-content: center;
+}
+
+.homeInputFields {
+  border: none;
+  border-bottom: 2px;
+}
+
+.homeRow1 {
+  margin: 90px
+}
+
+.home1 {
+  margin-bottom: 25px;
 }
 /* About Page Styling */
 .headshot {
@@ -232,16 +257,9 @@ p.abouttext {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  position: absolute;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  margin: auto;
 }
 
-.form-control {
-  width: 50px;
-}
 /* New Calculation Styling */
 
 .newCalcStart {
@@ -258,5 +276,38 @@ p.abouttext {
 }
 
 .securitySelect {
-  padding-left: 75px;
+  padding-left: 50px;
+}
+
+.selectRectangle {
+  height: 150px;
+  width: 100%;
+  background-color: #FEE6C5;
+}
+
+.newCalcContent {
+  padding-top: 350px;
+}
+
+h1.newCalcHead {
+  font-size: 70px;
+  padding-left: 50px;
+}
+
+/* Sign Up Page Styling */
+.signUpSquare {
+  height: 750px;
+  width: 750px;
+  background-color: #FFF2E0;
+  border-radius: 10px;
+}
+
+.signUpContainer {
+  padding: 30px 30px 30px 30px;
+}
+
+.createAccButtons {
+  width: 400px;
+  height: 75px;
+  font-size: 27px;
 }

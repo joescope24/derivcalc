@@ -1,10 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-</body>
-</html>
+{% block page_title %}About{% endblock %}
+
+{% block page_content %}
+<div class="centerContainer">
+    <div class="signUpSquare">
+        <div class="signUpContainer">
+            <div class="row">
+                <h1><i>Create DerivCalc Account</i></h1>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p class="hometext">Username</p>
+                    <label for="inputUsername" class="visually-hidden">Username</label>
+                    <input type="text" class="form-control homeInputFields" id="inputUsername" placeholder="Username" name="username" required>
+                </div>
+                <div class="col-6">
+                    <p class="hometext">Password</p>
+                    <label for="inputPassword" class="visually-hidden">Password</label>
+                    <input type="text" class="form-control homeInputFields" id="inputPassword" placeholder="Password" name="password" required>
+                </div>
+            </div>
+            <div class="row">
+                <p class="hometext">Email</p>
+                <label for="inputEmail" class="visually-hidden">Email</label>
+                <input type="text" class="form-control homeInputFields" id="inputEmail" placeholder="Email" name="email" required>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <p class="hometext">First Name</p>
+                    <label for="inputFirstName" class="visually-hidden">First Name</label>
+                    <input type="text" class="form-control homeInputFields" id="inputFirstName" placeholder="First Name" name="firstname" required>
+                </div>
+                <div class="col-6">
+                    <p class="hometext">Last Name</p>
+                    <label for="inputLastName" class="visually-hidden">Last Name</label>
+                    <input type="text" class="form-control homeInputFields" id="inputLastName" placeholder="Last Name" name="lastname" required>
+                </div>
+                <div class="homeSpacer"></div>
+                <div class="row">
+                    <form action="{{ url_for('signUp') }}" method="POST"><button type="submit" class="inputButtons createAccButtons center">Create Account</button></form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

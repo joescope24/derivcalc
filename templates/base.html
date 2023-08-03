@@ -9,15 +9,19 @@
   </head>
     <!-- Navbar Code -->
       <nav class="navbar navbar-expand-lg" style="background-color: #FFF8EF;">
-        <div class="container-fluid" style="padding-left: 25px;">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <a class="navbar-brand" href="/home"><img src="static/images/dvclogo-removebg.png" style="height: 40px; width: 65px;"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
+          <div class="nav1" style="padding: 0px 0px 0px 30px">
+            <div class="logoFlex">
+              <a class="navbar-brand" href="/home"><img src="static/images/dvclogo-removebg.png" style="height: 40px; width: 65px;"></a>
+            </div>
+          </div>
+          <div class="nav1 justify-content-center">
             <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                <a class="nav-link" aria-current="page" href="/home">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
@@ -30,16 +34,25 @@
                   <li><a class="dropdown-item" href="#">History</a></li>
                 </ul>
               </li>
-              {% if current_user.is_authenticated %}
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('logout') }}">Log Out</a>
-              </li>
-              {% else %}
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/home">Log In</a>
-              </li>
-              {% endif %}
             </ul>
+          </div>
+          <div class="nav1">
+            <div class="logoFlex">
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                {% if current_user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="{{ url_for('logout') }}">Log Out</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/home">Log In</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="/home">Create Account</a>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
