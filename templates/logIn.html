@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block page_title %}Log In{% endblock %}
+
+{% block page_content %}
+<div class="centerContainer">
+    <div class="signUpSquare">
+        <div class="signUpContainer">
+            <div class="row">
+                <h1 class="formText"><i>Log In to DerivCalc</i></h1>
+            </div>
+            <form action="{{ url_for('logIn') }}" method="POST">
+                <div class="row">
+                    <div class="d-flex justify-content-between" style="padding: 0px">
+                        <div class="signUpFields">
+                            <p class="formText">Username</p>
+                            <label for="inputUsername" class="visually-hidden">Username</label>
+                            <input type="text" class="form-control homeInputFields" id="inputUsername" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="columnSpace"></div>
+                        <div class="signUpFields">
+                            <p class="formText">Password</p>
+                            <label for="inputPassword" class="visually-hidden">Password</label>
+                            <input type="password" class="form-control homeInputFields" id="inputPassword" placeholder="Password" name="password" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="homeSpacer"></div>
+                <div class="row">
+                    <button type="submit" class="inputButtons createAccButtons center">Log In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

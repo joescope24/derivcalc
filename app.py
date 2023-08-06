@@ -60,7 +60,7 @@ def logIn():
                 return redirect(url_for(default_user_route_function, user_id=0))
         else:
             redirect_route = request.args.get('next')
-            return render_template('homePage.html', redirect_route=redirect_route)
+            return render_template('logIn.html', redirect_route=redirect_route)
 
     elif request.method == 'POST':
         username = request.form.get('username')
@@ -93,9 +93,9 @@ def signUp():
     elif request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        email = request.form['email']
         first_name = request.form['first_name']
         last_name = request.form['last_name']
-        email = request.form['email']
 
         # set variable for the password
         sha_password = generate_password_hash(password, method='sha256', salt_length=8)

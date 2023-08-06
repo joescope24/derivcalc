@@ -1,47 +1,55 @@
 {% extends "base.html" %}
 
-{% block page_title %}About{% endblock %}
+{% block page_title %}Sign Up{% endblock %}
 
 {% block page_content %}
 <div class="centerContainer">
     <div class="signUpSquare">
         <div class="signUpContainer">
             <div class="row">
-                <h1><i>Create DerivCalc Account</i></h1>
+                <h1 class="formText"><i>Create DerivCalc Account</i></h1>
             </div>
-            <div class="row">
-                <div class="col-6">
-                    <p class="hometext">Username</p>
-                    <label for="inputUsername" class="visually-hidden">Username</label>
-                    <input type="text" class="form-control homeInputFields" id="inputUsername" placeholder="Username" name="username" required>
+            <form action="{{ url_for('signUp') }}" method="POST">
+                <div class="row">
+                    <div class="d-flex justify-content-between" style="padding: 0px">
+                        <div class="signUpFields">
+                            <p class="formText">Username</p>
+                            <label for="inputUsername" class="visually-hidden">Username</label>
+                            <input type="text" class="form-control homeInputFields" id="inputUsername" placeholder="Username" name="username" required>
+                        </div>
+                        <div class="columnSpace"></div>
+                        <div class="signUpFields">
+                            <p class="hometext">Password</p>
+                            <label for="inputPassword" class="visually-hidden">Password</label>
+                            <input type="password" class="form-control homeInputFields" id="inputPassword" placeholder="Password" name="password" required>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <p class="hometext">Password</p>
-                    <label for="inputPassword" class="visually-hidden">Password</label>
-                    <input type="text" class="form-control homeInputFields" id="inputPassword" placeholder="Password" name="password" required>
+                <div class="row" style="padding: 0px">
+                    <p class="formText">Email</p>
+                    <label for="inputEmail" class="visually-hidden">Email</label>
+                    <input type="text" class="form-control homeInputFields" id="inputEmail" placeholder="Email" name="email" required>
                 </div>
-            </div>
-            <div class="row">
-                <p class="hometext">Email</p>
-                <label for="inputEmail" class="visually-hidden">Email</label>
-                <input type="text" class="form-control homeInputFields" id="inputEmail" placeholder="Email" name="email" required>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <p class="hometext">First Name</p>
-                    <label for="inputFirstName" class="visually-hidden">First Name</label>
-                    <input type="text" class="form-control homeInputFields" id="inputFirstName" placeholder="First Name" name="firstname" required>
-                </div>
-                <div class="col-6">
-                    <p class="hometext">Last Name</p>
-                    <label for="inputLastName" class="visually-hidden">Last Name</label>
-                    <input type="text" class="form-control homeInputFields" id="inputLastName" placeholder="Last Name" name="lastname" required>
+                <div class="row">
+                    <div class="d-flex justify-content-between" style="padding: 0px">
+                        <div class="signUpFields">
+                            <p class="formText">First Name</p>
+                            <label for="inputFirstName" class="visually-hidden">First Name</label>
+                            <input type="text" class="form-control homeInputFields" id="inputFirstName" placeholder="First Name" name="first_name" required>
+                        </div>
+                        <div class="columnSpace"></div>
+                        <div class="signUpFields">
+                            <p class="formText">Last Name</p>
+                            <label for="inputLastName" class="visually-hidden">Last Name</label>
+                            <input type="text" class="form-control homeInputFields" id="inputLastName" placeholder="Last Name" name="last_name" required>
+                        </div>
+                    </div>
                 </div>
                 <div class="homeSpacer"></div>
                 <div class="row">
-                    <form action="{{ url_for('signUp') }}" method="POST"><button type="submit" class="inputButtons createAccButtons center">Create Account</button></form>
+                    <button type="submit" class="inputButtons createAccButtons center">Create Account</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
