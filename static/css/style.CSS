@@ -131,15 +131,6 @@ html body {
   border-color: lightgray;
 }
 
-nav {
-  z-index: 10;
-}
-.nav-item {
-  font-size: 22px;
-  padding: 0px 20px 0px 20px;
-  color: gray;
-}
-
 .centerContainer {
   display: flex;
   justify-content: center;
@@ -151,16 +142,52 @@ nav {
   background-color: #FEE6C5;
   border-width: 0px;
   border-radius: 10px;
+  width: fit-content;
+  height: fit-content;
+  padding: 15px;
+  font-size: max(15px, 1.5vw);
 }
 
-.navFlexLeft {
-  width: 500px;
-  justify-content: left;
+.pageContent {
+  display: flex;
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+/* Navbar Styling */
+
+nav {
+  z-index: 10;
+}
+
+.nav-item {
+  font-size: max(15px, 0.85vw);
+  color: gray;
+}
+
+.navParent {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 1% 0% 1%;
+}
+
+.navMid {
+  justify-content: center;
+}
+
+.nav1 {
+  flex: 1;
 }
 
 .navFlexRight {
-  width: 500px;
-  flex-direction: row-reverse;
+  display: flex;
+  justify-content: right;
+}
+
+.navSpacing {
+  display: flex;
+  justify-content: space-between;
+  gap: 2vw;
 }
 
 /* Landing Page Styling */
@@ -220,98 +247,159 @@ img.backgroundimg {
 
 .homePhoto {
   height: auto;
-  width: 950px;
+  max-width: 100%;
   border-radius: 15px;
   box-shadow: 10px 10px 50px gray;
-}
-
-.homeAlign {
-  display: flex;
-  background-color: #FFF8EF;
-  padding: 50px 50px 0px 50px;
 }
 
 .homeSpacer {
-  height: 50px
+  height: 12%;
+}
+
+@media(max-width: 1234px) {
+  .homeSpacer {
+    height: 0;
+  }
+
+  .inputButtons {
+    padding: 10px;
+  }
 }
 
 p.hometext {
-  font-size: 25px;
-  padding-top: 25px;
+  font-size: max(15px, 1vw);
+  padding-top: 3%;
 }
 
-.homeSignIn {
+.parentFlex {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 3% 5% 3%;
+  flex-basis: 100%;
+}
+
+@media(max-width: 767px) {
+  .homeParent {
+    justify-content: center;
+  }
+
+  .homeChild-1 {
+    flex-direction: column;
+  }
+}
+
+.homeChild-1 {
+  display: flex;
+  padding-bottom: 5%;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.homeChild-2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.homeItem-1 {
+  flex-basis: 55%;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 0;
+}
+
+.homeItem-2 {
+  flex-basis: 45%;
+  min-width: 0;
+}
+
+.home1CenterFlex {
+  display: flex;
   justify-content: center;
 }
 
-.homeInputFields {
-  border: none;
-  border-bottom: 2px;
-}
-
-.homeRow1 {
-  margin: 90px
-}
-
-.home1 {
-  margin-bottom: 25px;
-}
 /* About Page Styling */
+@media(max-width: 1207px) {
+  .aboutChild-1 {
+    flex-direction: column-reverse;
+  }
+
+  .headshot {
+    width: 75%;
+    height: auto;
+  }
+
+  .aboutItem-1 {
+    display: flex;
+    justify-content: center;
+  }
+}
 .headshot {
-  width: 750px;
-  height: 750px;
+  max-width: 100%;
+  height: auto;
   border-radius: 15px;
   box-shadow: 10px 10px 50px gray;
 }
 
+.aboutChild-1 {
+  display: flex;
+  justify-content: space-between;
+  gap: 5%;
+}
+.aboutItem-1 {
+  flex-basis: 30%;
+  justify-content: center;
+}
+
+.aboutItem-2 {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+}
+
+p.aboutIntro {
+  font-size: max(18px, 1.5vw);
+}
 p.abouttext {
-  font-size: 25px;
-  padding-top: 50px;
+  font-size: max(14px, 1.15vw);
+  padding-top: 1.5%;
 }
 
 .aboutheader {
-  font-size: 100px;
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
+  font-size: max(24px, 3.4vw);
 }
 
 /* New Calculation Styling */
-
-.newCalcStart {
-  padding-top: 400px;
+.ncParent {
+  display: flex;
+  flex-direction: column;
+  padding: 15% 2% 15% 2%;
 }
 
 .inputDrop {
-  width: 500px;
-  height: 100px;
+  width: fit-content;
+  height: fit-content;
+  min-width: 344px;
+  min-height: 30px;
   border-radius: 15px;
-  font-size: 35px;
+  font-size: max(20px, 1.25vw);
   border-width: 0px;
-  padding: 15px;
-}
-
-.securitySelect {
-  padding-left: 50px;
+  padding: 1% 15% 1% 1%;
 }
 
 .selectRectangle {
-  height: 150px;
+  height: 100%;
   width: 100%;
   background-color: #FEE6C5;
 }
 
-.newCalcContent {
-  padding-top: 350px;
+h1.newCalcHead {
+  font-size: max(40px, 2.75vw);
+  padding: 0% 0% 1% 2%;
 }
 
-h1.newCalcHead {
-  font-size: 70px;
-  padding-left: 50px;
+h1.ncPrompt {
+  font-size: max(30px, 2.25vw);
 }
 
 /* Sign Up Page Styling */
@@ -324,12 +412,6 @@ h1.newCalcHead {
 
 .signUpContainer {
   padding: 30px 30px 30px 30px;
-}
-
-.createAccButtons {
-  width: 400px;
-  height: 75px;
-  font-size: 27px;
 }
 
 .signUpFields {

@@ -3,12 +3,10 @@
 {% block page_title %}New Calculation{% endblock %}
 
 {% block page_content %}
-<div class="selectRectangle d-flex align-items-center fadeDown">
-    <h1 class="newCalcHead">New Calculation</h1>
-</div>
-<div class="newCalcContent">
-    <div class="securitySelect">
-        <h1 style="font-size: 60px">What will you be pricing?</h1>
+<div class="selectRectangle fadeDown"><h1 class="newCalcHead">New Calculation</h1></div>
+<div class="ncParent">
+    <div class="ncChild-1">
+        <h1 class="ncPrompt">What will you be pricing?</h1>
         <select class="inputDrop" aria-label="Large select example">
           <option selected>Select a security</option>
           <option value="1">One</option>
@@ -16,5 +14,9 @@
           <option value="3">Three</option>
         </select>
     </div>
+    <div class="ncChild-2">
+
+    </div>
 </div>
 {% endblock %}
+

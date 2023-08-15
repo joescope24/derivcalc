@@ -27,12 +27,12 @@ login_manager.init_app(app)
 def load_user(account_id):
     return Credentials.query.get(account_id)
 
+# @app.route('/')
+# def landingPage():
+    # return render_template('landingPage.html')
+
+
 @app.route('/')
-def landingPage():
-    return render_template('landingPage.html')
-
-
-@app.route('/home')
 def homePage():
     return render_template('homePage.html')
 
